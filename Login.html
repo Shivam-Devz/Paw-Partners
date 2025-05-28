@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Paw Partners</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <h3>Paw Partners</h3>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="nav-links">
+        <li> <img src="assets/homeicon.webp" alt="" class="home-img"> Home</li>
+        <li>
+          <img src="assets/profileicon.jpg" alt="" class="pro-img" /> Login
+        </li>
+        <li><img src="assets/CartIcon.png" alt="" class="cart-img" /> Cart</li>
+      </ul>
+    </div>
+
+    <div class="login-container">
+      <h2 id="form-title">Sign In</h2>
+
+      <form id="login-form" class="login-form">
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+
+      <form id="signup-form" class="hidden">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Register</button>
+      </form>
+
+      <p id="toggle-message">
+        Don't have an account?
+        <a href="#" id="toggle-link">Register here</a>
+      </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
