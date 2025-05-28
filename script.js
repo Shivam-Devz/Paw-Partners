@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Navbar Navigation
+
   const navItems = document.querySelectorAll(".navbar ul li");
   navItems.forEach((item) => {
     item.addEventListener("click", () => {
@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Login/Signup Toggle Logic
   const loginForm = document.getElementById("login-form");
   const signupForm = document.getElementById("signup-form");
   const formTitle = document.getElementById("form-title");
@@ -47,10 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
         ? `Already have an account? <a href="#" id="toggle-link">Login here</a>`
         : `Don't have an account? <a href="#" id="toggle-link">Register here</a>`;
 
-      attachToggleLink(); // reattach after innerHTML change
+      attachToggleLink();
     }
 
-    // Initial link attachment
     attachToggleLink();
   }
 
@@ -60,7 +58,23 @@ document.addEventListener("DOMContentLoaded", () => {
   if (hamburger && navLinks) {
     hamburger.addEventListener("click", () => {
       navLinks.classList.toggle("show");
-      hamburger.classList.toggle("active"); // For "X" animation
+      hamburger.classList.toggle("active");
     });
   }
+
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
 });

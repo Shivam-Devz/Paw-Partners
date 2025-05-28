@@ -80,6 +80,24 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.swiper {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  margin: auto;
+}
+
+.swiper-slide img {
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+
 .home-img {
   width: 25px;
   height: 25px;
