@@ -31,6 +31,9 @@ body {
   -webkit-text-fill-color: transparent;
   font-weight: 700;
 }
+.navbar p{
+  font-size: 13px;
+}
 
 .search-bar {
   position: relative;
@@ -83,7 +86,6 @@ body {
 
 .swiper {
   width: 100%;
-  max-width: 800px;
   height: 400px;
   margin: auto;
 }
@@ -112,6 +114,20 @@ body {
   width: 25px;
   height: 25px;
   margin-right: 4px;
+}
+
+.heading h2{
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 60px;
+}
+.heading p{
+  font-size: 13px;
 }
 
 .login-container,
@@ -223,18 +239,20 @@ button:hover {
   .navbar h3 {
     font-size: 30px;
   }
+  .navbar p{
+    font-size: 10px;
+  }
 
   .search-bar {
     align-self: center;
-    width: 250px;
-    margin-left: 60px;
+    width: 600px;
   }
 
   .hamburger {
     display: flex;
     position: fixed;
     right: 30px;
-    top: 20px;
+    top: 25px;
   }
 
   #nav-links {
@@ -251,6 +269,13 @@ button:hover {
 
   #nav-links.show {
     display: flex;
+  }
+
+  .heading h2{
+    font-size: 40px;
+  }
+  .heading p{
+    font-size: 13px;
   }
 
   .login-container {
