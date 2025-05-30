@@ -130,6 +130,14 @@ body {
   font-size: 13px;
 }
 
+.banner{
+  padding: 15px;
+  font-size: 20px;
+  background-color: #2e2e2e;
+  color: #f1f1f1;
+  text-align: center;
+}
+
 .login-container,
 .cart-container {
   max-width: 400px;
@@ -144,6 +152,83 @@ body {
 .login-container h2 {
   margin-bottom: 20px;
   color: #333;
+}
+
+.cart-container h2{
+  font-size: 40px;
+  font-weight:500;
+}
+
+.shop p{
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer {
+  background-color: #2e2e2e;
+  color: #f1f1f1;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1 1 300px;
+  padding: 20px;
+}
+
+.footer-left h3,
+.footer-right h2 {
+  margin-bottom: 10px;
+  color: #ffcc00;
+}
+
+.footer-left p,
+.footer-right p {
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.footer hr {
+  border: 0;
+  border-top: 1px solid #555;
+  margin: 30px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.footer-bottom2 {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bottom2 p {
+  margin: 0;
+  cursor: pointer;
+}
+
+.footer-bottom2 p:hover {
+  text-decoration: underline;
 }
 
 form {
