@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-
+  // Nav click handling
   const navItems = document.querySelectorAll(".navbar ul li");
   navItems.forEach((item) => {
     item.addEventListener("click", () => {
@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Login/signup toggle
   const loginForm = document.getElementById("login-form");
   const signupForm = document.getElementById("signup-form");
   const formTitle = document.getElementById("form-title");
@@ -52,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     attachToggleLink();
   }
 
+  // Hamburger menu
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.getElementById("nav-links");
 
@@ -62,10 +64,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Swiper carousel
   const swiper = new Swiper('.swiper', {
     loop: true,
     autoplay: {
-      delay: 3000,
+      delay: 4000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -77,4 +80,42 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: '.swiper-button-prev',
     },
   });
+
+  // 🛒 Cart Logic
+
+  // Add to cart buttons
+  const addToCartButtons = document.querySelectorAll("button[data-product]");
+  addToCartButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const productName = button.dataset.product;
+      const price = parseFloat(button.dataset.price);
+      addToCart(productName, price);
+    });
+  });
+
+  // Add to cart function
+  function addToCart(productName, price) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const index = cart.findIndex(item => item.name === productName);
+
+    if (index !== -1) {
+      cart[index].quantity += 1;
+    } else {
+      cart.push({ name: productName, price: price, quantity: 1 });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+  }
+
+  // Update cart counter
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const countEl = document.getElementById("cart-count");
+    if (countEl) countEl.textContent = count;
+  }
+
+  // Initialize cart count on load
+  updateCartCount();
 });

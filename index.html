@@ -50,23 +50,58 @@
         </ul>
       </nav>
     </header>
-    <div class="content-wrapper">
-      <div class="offer">
-        <img src="assets/food_offer.jpeg" alt="offer" />
-      </div>
-
+    <main>
       <div class="swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="assets/puppy.webp" alt="" /></div>
-          <div class="swiper-slide"><img src="assets/cat1.jpg" alt="" /></div>
-          <div class="swiper-slide"><img src="assets/parrot.jpg" alt="" /></div>
+          <div class="swiper-slide">
+            <img src="assets/pedigree.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/whiskas1.jpg" alt="" />
+          </div>
+          <div class="swiper-slide"><img src="assets/drools.png" alt="" /></div>
         </div>
 
         <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
-    </div>
+      <hr />
+
+      <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="assets/dog-treats.jpeg" alt="Dog Treats" />
+            <h3>Dog Treats</h3>
+            <p>₹299</p>
+            <button data-product="Dog Treats" data-price="299">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="assets/catnip-toy.png" alt="Catnip Toy" />
+            <h3>Catnip Toy</h3>
+            <p>₹99</p>
+            <button data-product="Catnip Toy" data-price="99">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="assets/bird-food.jpeg" alt="Bird Food Mix" />
+            <h3>Bird Food Mix</h3>
+            <p>₹199</p>
+            <button data-product="Bird Food Mix" data-price="199">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="assets/dog-shampoo.png" alt="Dog Shampoo" />
+            <h3>Natural Dog Shampoo</h3>
+            <p>₹249</p>
+            <button data-product="Dog Shampoo" data-price="249">Add to Cart</button>
+          </div>
+        </div>
+        <a href="product.html" class="view-all-btn">View All Products</a>
+      </section>
+    </main>
+    <a href="Cart.html" class="cart-icon">
+      🛒 <span id="cart-count">0</span>
+    </a>
 
     <footer>
       <div class="footer">
